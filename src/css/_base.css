@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+$white: #FFF;
+$black: #000;
+$purple: #7120EA;
+$dark-purple: #282A41;
+$dark-purple-alt: #332E56;
+
+@custom-media --xs (max-width: 540px);
+@custom-media --sm (max-width: 720px);
+@custom-media --md (max-width: 960px);
+@custom-media --lg (max-width: 1140px);
+@custom-media --xl (max-width: 1320px);
+
+%scrollbar {
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba($white, .1);
+
+        &:hover {
+            background: rgba($white, .2); 
+        }
+    }
+}
+
+%gradient {
+    background: rgb(91,64,232);
+    background: -moz-linear-gradient(90deg, rgba(91,64,232,1) 0%, rgba(246,129,203,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(91,64,232,1) 0%, rgba(246,129,203,1) 100%);
+    background: linear-gradient(90deg, rgba(91,64,232,1) 0%, rgba(246,129,203,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b40e8",endColorstr="#f681cb",GradientType=1);
+}
+
+* {
+    box-sizing: border-box;
+    color: $white;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    position: relative;
+    background-color: rgb(40,42,65);
+
+    @extend %scrollbar;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(40,42,65);
+    background: -moz-linear-gradient(90deg, rgba(40,42,65,1) 0%, rgba(51,46,86,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(40,42,65,1) 0%, rgba(51,46,86,1) 100%);
+    background: linear-gradient(90deg, rgba(40,42,65,1) 0%, rgba(51,46,86,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#282a41",endColorstr="#332e56",GradientType=1);
+    transition: 0.3s;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (--lg) {
+        max-width: 1140px;
+    }
+
+    @media (--md) {
+        max-width: 960px;
+    }
+
+    @media (--sm) {
+        max-width: 720px;
+    }
+
+    @media (--xs) {
+        max-width: 540px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.sec-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    font-size: 48px;
+    position: relative;
+    margin: 0 0 100px; 
+
+    &::after {
+        content: '';
+        width: 80px;
+        height: 8px;
+        border-radius: 4px;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        @extend %gradient;
+    }
+}
