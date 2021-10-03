@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "template_by_mateus_daniel",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Mateus Daniel da Silva",
@@ -17,20 +17,30 @@
     "gulp-image": "^6.0.0",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
     "gulp-watch": "^5.0.1",
     "natives": "1.1.6",
-    "node-sass": "^4.13.1",
+    "node-sass": "^6.0.1",
     "postcss": "^8.2.4",
     "postcss-cli": "^7.1.0",
     "postcss-custom-media": "^8.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.42.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateusDanieel/my-boilerplate-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MateusDanieel/my-boilerplate-template/issues"
+  },
+  "homepage": "https://github.com/MateusDanieel/my-boilerplate-template#readme",
   "description": ""
 }
